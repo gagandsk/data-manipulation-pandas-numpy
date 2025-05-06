@@ -36,3 +36,32 @@ print(matriz[1:])
 
 #Para acceder a los valores a nivel de filas y columnas.
 print(matriz[1:,0:2])
+
+'''
+1: ✅ np.arange (Start,Ens,Steps) → es como el list( range(0,10)) pero como arrange 
+2: ✅ np.zeros(n) 
+3: ✅ np.ones(n) 
+4: ✅ np.linspace(Start, End, Cant n de Start a End) 
+5: ✅ np.eye(n) ·· Matriz identidad
+
+Arrays con numeros randoms
+np.random.rand(Columnas, Filas, mas dimensiones ) ·· Ambos con numeros randoms ☑️ np.random.randint(Start, End, Dimensiones) ·· N random entre Start y End y tupla dims
+'''
+# Creacion de arrays
+print(np.arange(0,20))
+print(np.arange(0,20, 2))
+
+print(np.zeros(2))
+print(np.zeros((10,2)))
+
+print(np.ones((2,3)))
+
+print(np.linspace(0,10,100))
+
+print(np.eye(4))
+
+print(np.random.rand(4,4))
+print(np.random.rand(4))
+
+print(np.random.randint(1,15))
+print(np.random.randint(1,100,(10,10)))
