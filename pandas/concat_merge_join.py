@@ -54,3 +54,17 @@ print(right)
 print('how: inner =>\n', left.merge(right, left_on='key', right_on='key_2', how='inner'))
 print('how: left =>\n', left.merge(right, left_on='key', right_on='key_2', how='left'))
 print('how:right =>\n', left.merge(right, left_on='key', right_on='key_2', how='right'))
+
+# Join (match index)
+
+izq = pd.DataFrame({'A': ['A0', 'A1', 'A2'],
+ 'B': ['B0', 'B1', 'B2']}, index=['k0', 'k1', 'k2'])
+
+der = pd.DataFrame({'C': ['C0', 'C1', 'C2'],
+ 'D': ['D0', 'D1', 'D2']}, index=['k0', 'k2', 'k3'])
+
+print(izq.join(der))
+print('inner =>',izq.join(der, how='inner'))
+print('left =>', izq.join(der, how='left'))
+print('right =>',izq.join(der, how='right'))
+print('outer =>',izq.join(der, how='outer'))
